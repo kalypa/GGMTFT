@@ -29,12 +29,20 @@ public class CharInfoUI : MonoBehaviour
             return;
         }
 
+        Setting(ps[0] as Character);
+
     }
 
     public void Setting(Character newChar)
     {
         currentCharacter = newChar;
     }
+
+    private void OnDestroy()
+    {
+        EventManager.StopListening(ECharInfoUI.ShowInfoUI, Setting);
+    }
+
 
 
 }
