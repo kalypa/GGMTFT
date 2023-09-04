@@ -378,37 +378,6 @@ public class GamePlayController : MonoBehaviour
        
     }
 
-
-    /// <summary>
-    /// Get champion gameobject from triggerinfo
-    /// </summary>
-    /// <param name="triggerinfo"></param>
-    /// <returns></returns>
-    private GameObject GetChampionFromTriggerInfo(TriggerInfo triggerinfo)
-    {
-        GameObject championGO = null;
-
-        if (triggerinfo.gridType == Map.GRIDTYPE_OWN_INVENTORY)
-        {
-            championGO = ownChampionInventoryArray[triggerinfo.gridX];
-        }
-        else if (triggerinfo.gridType == Map.GRIDTYPE_OPONENT_INVENTORY)
-        {
-            championGO = oponentChampionInventoryArray[triggerinfo.gridX];
-        }
-        else if (triggerinfo.gridType == Map.GRIDTYPE_HEXA_MAP)
-        {
-            championGO = gridChampionsArray[triggerinfo.gridX, triggerinfo.gridZ];
-        }
-
-        return championGO;
-    }
-
-    /// <summary>
-    /// Store champion gameobject in array
-    /// </summary>
-    /// <param name="triggerinfo"></param>
-    /// <param name="champion"></param>
     private void StoreChampionInArray(int gridType, int gridX, int gridZ, GameObject champion)
     {
         //assign current trigger to champion
