@@ -272,7 +272,7 @@ public class GamePlayController : MonoBehaviour
         { 
             dragStartTrigger = triggerinfo;
 
-            GameObject championGO = GetChampionFromTriggerInfo(triggerinfo);
+            GameObject championGO = GridManager.Inst.GetChampionFromTriggerInfo(triggerinfo);
             
             if(championGO != null)
             {
@@ -313,7 +313,7 @@ public class GamePlayController : MonoBehaviour
             if (triggerinfo != null)
             {
                 //get current champion over mouse cursor
-                GameObject currentTriggerChampion = GetChampionFromTriggerInfo(triggerinfo);
+                GameObject currentTriggerChampion = GridManager.Inst.GetChampionFromTriggerInfo(triggerinfo);
 
                 //there is another champion in the way
                 if (currentTriggerChampion != null)

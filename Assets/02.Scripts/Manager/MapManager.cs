@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 /// <summary>
 /// Creates map grids where the player can move champions on
 /// </summary>
-public class Map : MonoBehaviour
+public class MapManager : MonoBehaviour
 {
     //declare grid types
     public static int GRIDTYPE_OWN_INVENTORY = 0;
@@ -45,7 +45,7 @@ public class Map : MonoBehaviour
     /// Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
@@ -76,7 +76,7 @@ public class Map : MonoBehaviour
             float offsetX = i * -2.5f;
 
             //calculate and store the position
-            Vector3 position = GetMapHitPoint(ownInventoryStartPosition.position + new Vector3(offsetX, 0,0));
+            Vector3 position = GetMapHitPoint(ownInventoryStartPosition.position + new Vector3(offsetX, 0, 0));
 
             //add position variable to array
             ownInventoryGridPositions[i] = position;
@@ -113,7 +113,7 @@ public class Map : MonoBehaviour
                 //add position variable to array
                 mapGridPositions[x, z] = position;
             }
-          
+
         }
 
     }
@@ -207,17 +207,17 @@ public class Map : MonoBehaviour
 
         }
         */
-     
+
         //iterate map grid position
         for (int x = 0; x < hexMapSizeX; x++)
         {
-            for (int z = 0; z < hexMapSizeZ /2; z++)
+            for (int z = 0; z < hexMapSizeZ / 2; z++)
             {
                 //create indicator gameobject
                 GameObject indicatorGO = Instantiate(hexaIndicator);
 
                 //set indicator gameobject position
-                indicatorGO.transform.position = mapGridPositions[x,z];
+                indicatorGO.transform.position = mapGridPositions[x, z];
 
                 //set indicator parent
                 indicatorGO.transform.parent = indicatorContainer.transform;
@@ -327,7 +327,7 @@ public class Map : MonoBehaviour
     {
         GameObject triggerGo = null;
 
-        if(triggerinfo.gridType == GRIDTYPE_OWN_INVENTORY)
+        if (triggerinfo.gridType == GRIDTYPE_OWN_INVENTORY)
         {
             triggerGo = ownIndicatorArray[triggerinfo.gridX];
         }
@@ -357,13 +357,13 @@ public class Map : MonoBehaviour
             }
         }
 
-        
+
         for (int x = 0; x < 9; x++)
         {
-           ownIndicatorArray[x].GetComponent<MeshRenderer>().material.color = indicatorDefaultColor;
-          // oponentIndicatorArray[x].GetComponent<MeshRenderer>().material.color = indicatorDefaultColor;
+            ownIndicatorArray[x].GetComponent<MeshRenderer>().material.color = indicatorDefaultColor;
+            // oponentIndicatorArray[x].GetComponent<MeshRenderer>().material.color = indicatorDefaultColor;
         }
-        
+
     }
 
     /// <summary>

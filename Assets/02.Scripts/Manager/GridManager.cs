@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridManager : MonoBehaviour
+public class GridManager : MonoSingleton<GridManager>
 {
     [HideInInspector] public GameObject[] ownChampionInventoryArray;
     [HideInInspector] public GameObject[] oponentChampionInventoryArray;
     [HideInInspector] public GameObject[,] gridChampionsArray;
-
+    public GameObject draggedChampion = null;
+    public TriggerInfo dragStartTrigger = null;
     private void Start()
     {
         ownChampionInventoryArray = new GameObject[Map.inventorySize];
@@ -15,7 +16,7 @@ public class GridManager : MonoBehaviour
         gridChampionsArray = new GameObject[Map.hexMapSizeX, Map.hexMapSizeZ / 2];
     }
 
-    private GameObject GetChampionFromTriggerInfo(TriggerInfo triggerinfo)
+    public GameObject GetChampionFromTriggerInfo(TriggerInfo triggerinfo)
     {
         GameObject championGO = null;
 
@@ -35,7 +36,7 @@ public class GridManager : MonoBehaviour
         return championGO;
     }
 
-    private void StoreChampionInArray(int gridType, int gridX, int gridZ, GameObject champion)
+    public void StoreChampionInArray(int gridType, int gridX, int gridZ, GameObject champion)
     {
         //assign current trigger to champion
         ChampionController championController = champion.GetComponent<ChampionController>();
@@ -51,7 +52,7 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    private void RemoveChampionFromArray(int type, int gridX, int gridZ)
+    public void RemoveChampionFromArray(int type, int gridX, int gridZ)
     {
         if (type == Map.GRIDTYPE_OWN_INVENTORY)
         {
@@ -63,7 +64,7 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    private int GetChampionCountOnHexGrid()
+    public int GetChampionCountOnHexGrid()
     {
         int count = 0;
         for (int x = 0; x < Map.hexMapSizeX; x++)
