@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:ScrollView vertical-scroller-visibility="Auto" horizontal-scroller-visibility="Hidden" mode="Vertical" focusable="false" style="flex-direction: row; flex-wrap: wrap; width: 350px; min-width: 350px; align-items: stretch; justify-content: flex-start; flex-shrink: 1; flex-grow: 0; position: relative;">
+        <ui:GroupBox style="flex-direction: row; flex-wrap: wrap;">
+            <ui:Button text="CharacterSetting" display-tooltip-when-elided="true" view-data-key="CharacterBtn" name="CharacterBtn" style="-unity-text-align: lower-center; width: 100px;" />
+        </ui:GroupBox>
+        <ui:GroupBox style="height: 162px; flex-direction: column-reverse;">
+            <ui:Button text="세팅" display-tooltip-when-elided="true" name="settingBtn" view-data-key="settingBtn" style="white-space: nowrap;" />
+            <ui:Label display-tooltip-when-elided="true" name="SONameText" view-data-key="SONameText" style="margin-left: 30px;" />
+            <ui:Label text="현재 작업 : " display-tooltip-when-elided="true" name="CurrentWorkText" view-data-key="CurrentWorkText" />
+        </ui:GroupBox>
+    </ui:ScrollView>
+</ui:UXML>

@@ -25,7 +25,6 @@ public class CharInfoUI : MonoBehaviour
     public void Init() 
     {
         EventManager.StartListening(ECharInfoUI.ShowInfoUI, Setting);
-        InputManager.Inst.AddMouseInput(EMouseType.LeftClick, CheckClose);
     }
 
 
@@ -51,34 +50,16 @@ public class CharInfoUI : MonoBehaviour
         EventManager.StopListening(ECharInfoUI.ShowInfoUI, Setting);
     }
 
-    private void CheckClose()
-    {
-        Debug.Log("CheckClose");
-        PointerEventData data = new PointerEventData(EventSystem.current);
-        data.position = Input.mousePosition;
-        List<RaycastResult> hits = new List<RaycastResult>();
-
-        Debug.Log($"hits Count : {hits.Count}");
-        if(hits.Count == 0)
-        {
-            return;
-        }
-        EventSystem.current.RaycastAll(data, hits);
-        if (!Define.ExistInFirstHits(gameObject, hits[0]))
-        {
-            Debug.Log("Hide");
-            Hide();
-        }
-    }
-
     public void Show()
     {
-
+        EventManager.StartListening(EUIEvent.BackgroundPaenlClick, Hide);
+        gameObject.SetActive(true);
     }
 
-    public void Hide()
+    public void Hide(object[] ps = null)
     {
+        EventManager.StopListening(EUIEvent.BackgroundPaenlClick, Hide);
+
         gameObject.SetActive(false);
-        InputManager.Inst.RemoveMouseInput(EMouseType.LeftClick, CheckClose);
     }
 }

@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 639aac516ce9a2344bcbaf8acbe08e17, type: 3}
-  m_Name: Knight
+  m_Name: "\uBD88"
   m_EditorClassIdentifier: 
-  displayName: Knight
-  icon: {fileID: 21300000, guid: 2ccfeac0a61f65940ac1aa83eef156ef, type: 3}
+  displayName: "\uBD88"
+  icon: {fileID: 21300000, guid: e990a5073de357543bd3d2bc937f45e7, type: 3}
   championBonus:
-    championCount: 3
-    championBonusType: 1
-    championBonusTrigger: 1
-    bonusValue: 20
-    effectPrefab: {fileID: 0}
-    effectDuration: 0
+    championCount: 4
+    championBonusType: 2
+    bonusTarget: 1
+    bonusValue: 15
+    duration: 1.5
+    effectPrefab: {fileID: 7519005589694912038, guid: 3b2293f32fdde314aaf20f7bbeb003b9,
+      type: 3}

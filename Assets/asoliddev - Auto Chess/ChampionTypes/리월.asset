@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 639aac516ce9a2344bcbaf8acbe08e17, type: 3}
-  m_Name: Archer
+  m_Name: "\uB9AC\uC6D4"
   m_EditorClassIdentifier: 
-  displayName: Archer
-  icon: {fileID: 21300000, guid: 041b35f312f35dd479d07764ff1e7914, type: 3}
+  displayName: "\uB9AC\uC6D4"
+  icon: {fileID: 21300000, guid: d3b9c5ae5e838224180e868fb288cb0a, type: 3}
   championBonus:
-    championCount: 2
+    championCount: 0
     championBonusType: 0
-    bonusTarget: 1
-    bonusValue: 2
+    bonusTarget: 0
+    bonusValue: 0
     duration: 0
     effectPrefab: {fileID: 0}

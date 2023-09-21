@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 639aac516ce9a2344bcbaf8acbe08e17, type: 3}
-  m_Name: Wizard
+  m_Name: "\uC774\uB098\uC988\uB9C8"
   m_EditorClassIdentifier: 
-  displayName: Wizard
-  icon: {fileID: 21300000, guid: e9a263d4e30b7624498b58f5653aec10, type: 3}
+  displayName: "\uC774\uB098\uC988\uB9C8"
+  icon: {fileID: 21300000, guid: 3877e31075d982e4b82d5830c6b27cef, type: 3}
   championBonus:
     championCount: 2
     championBonusType: 0
