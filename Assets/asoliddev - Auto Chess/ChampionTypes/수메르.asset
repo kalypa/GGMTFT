@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639aac516ce9a2344bcbaf8acbe08e17, type: 3}
   m_Name: "\uC218\uBA54\uB974"
   m_EditorClassIdentifier: 
-  displayName: "\uC288\uBA54\uB974"
+  displayName: "\uC218\uBA54\uB974"
   icon: {fileID: 21300000, guid: 08f72741d1cfcbc45ba1fa02421154ba, type: 3}
   championBonus:
     championCount: 4

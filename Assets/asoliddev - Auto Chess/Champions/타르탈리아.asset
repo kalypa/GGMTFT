@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: "\uD0C0\uB974\uD0C8\uB9AC\uC544"
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8233451909787965928, guid: 23c16eadfa7cacd4d94fe7bfa63d0cff, type: 3}
+  attackProjectile: {fileID: 8898893296069002340, guid: d05c0e2ab31c88749b1a003b6919d649,
+    type: 3}
+  uiname: "\uD0C0\uB974\uD0C8\uB9AC\uC544"
+  cost: 5
+  type1: {fileID: 11400000, guid: 925a5733aa318e1478c669deaaa5ed35, type: 2}
+  type2: {fileID: 11400000, guid: 9803c034bc2bb174aaec125d4ca2526b, type: 2}
+  health: 900
+  damage: 50
+  attackRange: 15
+  championImage: {fileID: 21300000, guid: adaa01f1e2dee294c9f0164f3ba3cf6c, type: 3}

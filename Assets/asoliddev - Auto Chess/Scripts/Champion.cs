@@ -34,6 +34,8 @@ public class Champion : ScriptableObject
 
     ///The range the champion can start attack from
     public float attackRange = 1;
+
+    public Sprite championImage;
 }
 
 

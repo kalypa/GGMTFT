@@ -106,6 +106,7 @@ public class UIController : MonoBehaviour
         Transform cost = bottom.Find("Cost");
         Transform icon1 = top.Find("icon 1");
         Transform icon2 = top.Find("icon 2");
+        Transform championIcon = top.Find("Image");
 
 
         //assign texts from champion info to unit frames
@@ -115,6 +116,7 @@ public class UIController : MonoBehaviour
         type2.GetComponent<Text>().text = champion.type2.displayName;
         icon1.GetComponent<Image>().sprite = champion.type1.icon;
         icon2.GetComponent<Image>().sprite = champion.type2.icon;
+        championIcon.GetComponent<Image>().sprite = champion.championImage;
     }
 
     /// <summary>

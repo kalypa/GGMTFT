@@ -343,14 +343,14 @@ public class ChampionController : MonoBehaviour
         //incrase lvl
         lvl++;
 
-        float newSize = 1;
+        float newSize = transform.localScale.x;
         maxHealth = champion.health;
         currentHealth = champion.health;
 
 
         if (lvl == 2)
         {
-            newSize = 1.5f;
+            newSize = transform.localScale.x * 1.5f;
             maxHealth = champion.health * 2;
             currentHealth = champion.health * 2;
             currentDamage = champion.damage * 2;
@@ -359,7 +359,7 @@ public class ChampionController : MonoBehaviour
            
         if (lvl == 3)
         {
-            newSize = 2f;
+            newSize = transform.localScale.x * 2f;
             maxHealth = champion.health * 3;
             currentHealth = champion.health * 3;
             currentDamage = champion.damage * 3;
