@@ -42,14 +42,6 @@ public class Map : MonoBehaviour
         this.SendMessage("OnMapReady", SendMessageOptions.DontRequireReceiver);
     }
 
-    /// Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-
     //store grid positions in list
     [HideInInspector]
     public Vector3[] ownInventoryGridPositions;

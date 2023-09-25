@@ -17,7 +17,7 @@ MonoBehaviour:
     type: 3}
   uiname: "\uBAA8\uB098"
   cost: 1
-  type1: {fileID: 11400000, guid: 20194bd6b6279d248b8ab56f8997d477, type: 2}
+  type1: {fileID: 11400000, guid: f3e567881c605d247b05775a39e704ed, type: 2}
   type2: {fileID: 11400000, guid: 9803c034bc2bb174aaec125d4ca2526b, type: 2}
   health: 200
   damage: 20

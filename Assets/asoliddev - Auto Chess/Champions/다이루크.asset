@@ -16,7 +16,7 @@ MonoBehaviour:
   attackProjectile: {fileID: 0}
   uiname: "\uB2E4\uC774\uB8E8\uD06C"
   cost: 5
-  type1: {fileID: 11400000, guid: 20194bd6b6279d248b8ab56f8997d477, type: 2}
+  type1: {fileID: 11400000, guid: f3e567881c605d247b05775a39e704ed, type: 2}
   type2: {fileID: 11400000, guid: d190cf551b5d25645b384a58df4154a0, type: 2}
   health: 1000
   damage: 50
